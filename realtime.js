@@ -16,3 +16,4 @@ export default {
     return env.SESSIONS.get(env.SESSIONS.idFromName(new URL(request.url).searchParams.get('id') || 'probe')).fetch(request);
   }
 };
+// Second release for the live Workers Builds connection-survival test.
