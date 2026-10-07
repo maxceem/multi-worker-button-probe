@@ -1,0 +1,7 @@
+{
+  "name": "multi-worker-button-probe",
+  "main": "gateway.js",
+  "compatibility_date": "2026-10-07",
+  "workers_dev": true,
+  "preview_urls": false
+}
