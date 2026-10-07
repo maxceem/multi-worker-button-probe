@@ -18,7 +18,7 @@ async function api(path, allowMissing = false) {
     headers: { Authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(20000),
   });
   const body = await response.json();
-  if (allowMissing && body.errors?.some(error => error.code === 10007)) return null;
+  if (allowMissing && body.errors?.some(error => error.code === 10007 || error.code === 10090)) return null;
   if (!response.ok || !body.success) throw new Error(`Cloudflare API failure: ${JSON.stringify(body.errors)}`);
   return body.result;
 }
